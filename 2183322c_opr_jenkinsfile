@@ -13,7 +13,7 @@ pipeline {
 
       steps {
 	script{
-		sh 'docker build -t 2183322c_websvr_image .'
+		sh 'echo docker!2 | sh -S docker build -t 2183322c_websvr_image .'
 	}
         echo "2183322c Backup websvr image created"
 
