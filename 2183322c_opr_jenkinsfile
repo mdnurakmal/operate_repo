@@ -1,0 +1,47 @@
+pipeline {
+  agent none
+  stages {
+    stage('Opr_Stage_One_2183322c') {
+      steps {
+        echo "2183322c Start of Operation Pipeline"
+      }
+
+    }
+    stage('Opr_Stage_Two_2183322c') {
+
+      steps {
+        docker build -t 2183322c_websrv_image .
+        echo "2183322c Backup websvr image created"
+      }
+    }
+    stage('Opr_Stage_Three_2183322c') {
+    steps {
+        script {
+          env.PROCEED = input message: '2183322c Roll out new update to Prod Web ?'
+        }
+        echo "Proceed or Abort ?"
+    }
+    stage('Opr_Stage_Four_2183322c') {
+    steps {
+        docker build -t 2183322c_websrv_image .
+        echo "2183322c Update Operation Completed"
+      }
+    }
+    stage('Opr_Stage_Five_2183322c') {
+      steps {
+	script{
+      	echo "2183322c Production website is tested o.k.”"
+	}
+      }
+
+    }
+    stage('Opr_Stage_six_2183322c') {
+      steps {
+	script{
+      	echo "2183322c Production website is updated successfully"
+	}
+      }
+
+    }
+  }
+}
