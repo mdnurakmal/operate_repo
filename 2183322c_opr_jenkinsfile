@@ -3,15 +3,19 @@ pipeline {
   stages {
     stage('Opr_Stage_One_2183322c') {
       steps {
+      script{
         echo "2183322c Start of Operation Pipeline"
+	}
       }
 
     }
     stage('Opr_Stage_Two_2183322c') {
 
       steps {
+      script{
         docker build -t 2183322c_websrv_image .
         echo "2183322c Backup websvr image created"
+	}
       }
     }
     stage('Opr_Stage_Three_2183322c') {
@@ -24,10 +28,9 @@ pipeline {
     }
     stage('Opr_Stage_Four_2183322c') {
     steps {
-    	script {
-        docker build -t 2183322c_websrv_image .
-	}
+	script{
         echo "2183322c Update Operation Completed"
+	}
       }
     }
     stage('Opr_Stage_Five_2183322c') {
