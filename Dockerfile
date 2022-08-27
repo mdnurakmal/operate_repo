@@ -10,6 +10,8 @@ RUN dpkg -i puppet6-release-bionic.deb
 
 RUN apt update
 
+RUN apt-get install puppet-agent -y
+
 # Start puppet agent service
 RUN /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 
