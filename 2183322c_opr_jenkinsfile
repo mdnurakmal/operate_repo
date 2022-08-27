@@ -15,7 +15,6 @@ agent any
 	script{
 		docker.build mdnurakmal/operate_repo
 	}
-        sh 'echo "Jadmin!2" | sudo -S docker build -t 2183322c_websrv_image .'
         echo "2183322c Backup websvr image created"
 
       }
