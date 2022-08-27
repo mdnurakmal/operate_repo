@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('Opr_Stage_One_2183322c') {
       steps {
@@ -10,7 +10,7 @@ pipeline {
 
     }
     stage('Opr_Stage_Two_2183322c') {
-agent any
+
       steps {
 	script{
 		docker.build mdnurakmal/operate_repo
