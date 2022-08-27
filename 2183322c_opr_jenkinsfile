@@ -32,7 +32,7 @@ pipeline {
     steps {
 	script{
 	sh """#!/bin/bash
-	bolt script run '2183322c_script' -t puppetclient -u clientadm -p user123 --no-host-key-check --run-as root;
+	bolt script run '2183322c_script.sh' -t puppetclient -u clientadm -p user123 --no-host-key-check --run-as root;
 	"""
 
         echo "2183322c Update Operation Completed"
