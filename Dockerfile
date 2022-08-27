@@ -14,5 +14,6 @@ RUN apt-get install puppet-agent -y
 
 # Start puppet agent service
 
+RUN /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 
-CMD /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
+CMD tail -f /dev/null
