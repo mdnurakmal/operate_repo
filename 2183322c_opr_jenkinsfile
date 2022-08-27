@@ -21,6 +21,7 @@ pipeline {
         }
         echo "Proceed or Abort ?"
     }
+    }
     stage('Opr_Stage_Four_2183322c') {
     steps {
         docker build -t 2183322c_websrv_image .
