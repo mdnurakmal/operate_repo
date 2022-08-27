@@ -13,7 +13,7 @@ pipeline {
 
       steps {
 	script{
-		docker.build mdnurakmal/operate_repo
+		sh 'docker build -t 2183322c_websvr_image .'
 	}
         echo "2183322c Backup websvr image created"
 
