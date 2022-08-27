@@ -33,7 +33,7 @@ pipeline {
     stage('Opr_Stage_Five_2183322c') {
       steps {
 	script{
-      	echo "2183322c Production website is tested o.k.”"
+      	echo "2183322c Production website is tested o.k."
 	}
       }
 
