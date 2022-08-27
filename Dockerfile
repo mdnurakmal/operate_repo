@@ -9,11 +9,14 @@ RUN dpkg -i puppet6-release-bionic.deb
 
 RUN apt update
 RUN apt install apt-utils -y
+RUN apt install curl -y
+RUN apt install gnupg -y
+RUN curl -k https://192.168.100.1:8140/packages/current/install.bash | bash
 
-RUN apt-get install puppet-agent -y
+#RUN apt-get install puppet-agent -y
 
 # Start puppet agent service
 
-RUN /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
+#RUN /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 
 CMD tail -f /dev/null
