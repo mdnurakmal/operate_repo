@@ -9,6 +9,7 @@ RUN dpkg -i puppet6-release-bionic.deb
 
 
 RUN apt update
+RUN apt install apt-utils
 
 RUN apt-get install puppet-agent -y
 
