@@ -24,7 +24,9 @@ pipeline {
     }
     stage('Opr_Stage_Four_2183322c') {
     steps {
+    	script {
         docker build -t 2183322c_websrv_image .
+	}
         echo "2183322c Update Operation Completed"
       }
     }
