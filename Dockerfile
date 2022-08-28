@@ -12,6 +12,7 @@ RUN apt install apt-utils -y
 RUN apt install curl -y
 RUN apt install gnupg -y
 RUN apt-get install openssh-client
+RUN apt install openssh-server
 
 # Install agent on nodes and create certifcate signing request
 #RUN curl -k https://192.168.100.1:8140/packages/current/install.bash | bash
