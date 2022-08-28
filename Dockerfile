@@ -13,6 +13,7 @@ RUN apt install curl -y
 RUN apt install gnupg -y
 RUN apt install openssh-server -y
 RUN apt install iproute2 -y
+RUN apt install ufw -y
 
 # Install agent on nodes and create certifcate signing request
 #RUN curl -k https://192.168.100.1:8140/packages/current/install.bash | bash
