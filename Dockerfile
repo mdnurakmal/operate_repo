@@ -11,7 +11,7 @@ RUN apt update
 RUN apt install apt-utils -y
 RUN apt install curl -y
 RUN apt install gnupg -y
-RUN apt install openssh-server
+RUN apt install openssh-server -y
 RUN apt install iproute2 -y
 
 # Install agent on nodes and create certifcate signing request
