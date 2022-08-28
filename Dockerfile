@@ -11,7 +11,6 @@ RUN apt update
 RUN apt install apt-utils -y
 RUN apt install curl -y
 RUN apt install gnupg -y
-RUN apt-get install openssh-client
 RUN apt install openssh-server
 RUN apt install iproute2 -y
 
